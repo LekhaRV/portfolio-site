@@ -1,25 +1,92 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>LEKHA R VARIER</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <h1>Lekha R Varier</h1>
+    <nav class="navbar-right">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </nav>
   </header>
-  <!-- Sections go here -->
+
+  <div class="main-container">
+    <!-- Profile Image on Left -->
+    <aside class="profile-side">
+      <img src="img/pro.jpg" alt="Profile Photo" class="profile-img">
+    </aside>
+
+    <!-- Content on Right -->
+    <main class="content-side">
+      <section id="home" class="box">
+        <h2>Hello, I'm Lekha</h2>
+        <p>Welcome to my portfolio.</p>
+      </section>
+
+      <section id="about" class="box">
+        <h2>About Me</h2>
+        <p>
+          Hi! I'm a recent Computer Science graduate with a strong interest in software development,
+          web technologies, and AI. I've worked on projects involving web development, NoC secure routing,
+          and simulations using gem5.
+        </p>
+        <p>
+          I'm passionate about learning new technologies and applying them to solve real-world problems.
+        </p>
+      </section>
+
+      <section id="skills" class="box">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Python</span>
+          <span>C++</span>
+          <span>SQL</span>
+          <span>Git</span>
+          <span>GitHub</span>
+        </div>
+      </section>
+
+      <section id="projects" class="box">
+        <h2>Projects</h2>
+        <div class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>A responsive site built using HTML, CSS, and JavaScript showcasing my work and contact info.</p>
+        </div>
+        <div class="project-card">
+          <h3>Mood Matrix</h3>
+          <p>Web app that uses ML to assess stress from a questionnaire and gives personalized advice.</p>
+        </div>
+        <div class="project-card">
+          <h3>Mitigation of Black Hole Attack in NoC</h3>
+          <p>Implemented a trust-based routing mechanism to detect and avoid black hole attacks in NoC simulations.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="box">
+        <h2>Contact</h2>
+        <p>Email: lekha.r.varier@gmail.com</p>
+        <p>Phone: +91 9495762448</p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>© 2025 Lekha R Varier</p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
