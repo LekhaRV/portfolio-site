@@ -1,122 +1,150 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #f0f0f0;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #1f1f1f;
-    color: white;
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .navbar h1 {
-    flex: 1;
-    text-align: center;
-    font-size: 1.8rem;
-    color: #00adb5;
-  }
-  
-  .navbar-right {
-    position: absolute;
-    right: 2rem;
-  }
-  
-  .navbar-right a {
-    color: #eeeeee;
-    margin-left: 1.5rem;
-    text-decoration: none;
-  }
-  
-  .navbar-right a:hover {
-    color: #00adb5;
-  }
-  
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f1f1f;
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h1 {
+  flex: 1;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #00adb5;
+}
+
+.navbar-right {
+  position: absolute;
+  right: 2rem;
+}
+
+.navbar-right a {
+  color: #eeeeee;
+  margin-left: 1.5rem;
+  text-decoration: none;
+}
+
+.navbar-right a:hover {
+  color: #00adb5;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile-side {
+  flex: 1;
+  background-color: #2c2c2c;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  padding-top: 2rem;       
+  height: auto;            
+}
+
+.profile-img {
+  width: 90%;
+  height: auto;
+  object-fit: contain;     
+  border-radius: 8px;      
+}
+
+
+.content-side {
+  flex: 2;
+  padding: 2rem;
+}
+
+.box {
+  background-color: #1f1f1f;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-left: 5px solid #00adb5;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.skills-grid span {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.skills-grid span:hover {
+  background-color: #500bf0;
+  color: #000;
+}
+
+.project-card {
+  background-color: #2a2a2a;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  background-color: #00adb5;
+  color: #000;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background-color: #1f1f1f;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
   .main-container {
-    display: flex;
-    min-height: 100vh;
+    flex-direction: column;
   }
-  
-  .profile-side {
-    flex: 1;
-    background-color: #2c2c2c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150vh;
-    overflow: hidden;
-    
+
+  .navbar {
+    flex-direction: column;
+    text-align: center;
   }
-  
-  
-  .profile-img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    border-radius: 0;
-    
-  }
-  
-  .content-side {
-    flex: 2;
-    padding: 2rem;
-  }
-  
-  .box {
-    background-color: #1f1f1f;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    border-left: 5px solid #00adb5;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  }
-  
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 10px;
+
+  .navbar-right {
+    position: static;
     margin-top: 1rem;
   }
-  
-  .skills-grid span {
-    background-color: #333;
-    padding: 10px;
-    text-align: center;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
+
+  .navbar-right a {
+    margin: 0.5rem;
+    display: inline-block;
   }
-  
-  .skills-grid span:hover {
-    background-color: #500bf0;
-    color: #000;
-  }
-  
-  .project-card {
-    background-color: #2a2a2a;
+
+  .content-side {
     padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 6px;
-    transition: transform 0.2s ease;
   }
-  
-  .project-card:hover {
-    transform: scale(1.02);
-    background-color: #00adb5;
-    color: #000;
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
-  
-  footer {
-    width: 100%;
-    text-align: center;
-    padding: 1rem;
-    background-color: #1f1f1f;
-    color: white;
-  }
-  
+}
